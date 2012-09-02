@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ project.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- LOAD CSS ASSETS -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/gridline.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/font-awesome.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/shadowbox.css" rel="stylesheet">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+
+    <!-- LOAD GOOGLE WEBFONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}ico/apple-touch-icon-57-precomposed.png">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34372235-1']);
+  _gaq.push(['_setDomainName', 'podporvedu.cz']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </head>
+
+  <body >
+
+  <!-- START MAIN CONTAINER -->
+<div class="top_holder">
+  <div class="top_container">
+    <div class="top_logo"><a href="/"><img  src="{{ STATIC_URL }}img/logo.png" alt="logo"/></a> </div>
+  </div>
+</div>
+
+    <div class="container-fluid">
+    <div class="row-fluid">
+    
+
+<!-- START GRID -->
+<div class="project_center">
+  <p><h2>{{ project.name }}</h2></p>
+  <div class="project_box">
+    <div class="left1">
+      <div class="video_box">
+        <iframe width="450" height="300" src="{{ project.media }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="photo_box">
+        <a href="{{ STATIC_URL }}img/thumb_abt_1.jpg"><img src="{{ STATIC_URL }}img/thumb_abt_1.jpg" class="photo-thumb"></a>
+        <a href="{{ STATIC_URL }}img/thumb_abt_2.jpg"><img src="{{ STATIC_URL }}img/thumb_abt_2.jpg" class="photo-thumb"></a>
+        <a href="{{ STATIC_URL }}img/thumb_abt_3.jpg"><img src="{{ STATIC_URL }}img/thumb_abt_3.jpg" class="photo-thumb"></a>
+        <a href="{{ STATIC_URL }}img/thumb_abt_4.jpg"><img src="{{ STATIC_URL }}img/thumb_abt_4.jpg" class="photo-thumb"></a>
+        <a href="{{ STATIC_URL }}img/thumb_abt_5.jpg"><img src="{{ STATIC_URL }}img/thumb_abt_5.jpg" class="photo-thumb"></a>
+      </div>
+    </div>
+    <div class="right1">
+      <script src="{{ STATIC_URL }}js/bootstrap-tap.js"></script>
+         <ul class="nav nav-tabs" id="MyTab">
+          <li class="active"><a href="#pribeh" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Story']);">Příběh</a></li>
+          <li><a href="#tym" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Team']);">Tým</a></li>
+          <li><a href="#cil" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Goal']);">Cíl</a></li>
+          <li><a href="#vysledky" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Results']);">Výsledky</a></li>
+          <li><a href="#dokumenty" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Docs']);">Dokumenty</a></li>
+          <li><a href="#kontakt" data-toggle="tab" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Contact']);">Kontakt</a></li>
+        </ul>
+         
+        <div class="tab-content">
+          <div class="tab-pane active" id="pribeh"><p> {{ project.story }}</p></div>
+          <div class="tab-pane" id="tym"><p> {{ project.team }} </p></div>
+          <div class="tab-pane" id="cil"><p> {{ project.goal }}</p></div>
+          <div class="tab-pane" id="vysledky"><p>{{ project.results }}</p></div>
+          <div class="tab-pane" id="dokumenty"><p> {{ project.documents }}</p></div>
+          <div class="tab-pane" id="kontakt"><p> {{ project.contact }}</p></div>
+        </div>
+    </div>
+         
+  </div>  
+<!-- KONEC PROJEKT BOXU --> 
+
+  <div class="actions">
+    <table width="360"><tr><td><a href="/support/" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Support']);"><button class="btn btn-success" type="button">Dobrý nápad</button></a></td><td><a href="/support/" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Follow']);"><button class="btn btn-info" type="button">Chci sledovat</button></a></td><td><a href="/support/" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Donate']);"><button class="btn btn-danger" type="button">Chci přispět</button></a></td></tr></table>
+  </div>  
+  
+  <div class="status_projektu">
+  <h3>Finanční sbírka:</h3>
+    <div class="progress">
+      <div class="bar" style="width: {{ project.funding_progress }}%;"></div>
+    </div>
+    <div class="float_left">Získáno: {{ project.earned }},- Kč  |  Počet dárců: {{ project.count_donors }}</div>
+    <div class="float_right">Potřeba: {{ project.funding_needed }},- Kč</div>
+  </div> 
+  
+  <div class="novinky_box">
+    <h3>Novinky (2)</h3>
+    {% for news in news %}
+    <strong>{{ news.news_date }}</strong>
+    <p>{{ news.text }}</p>
+    {% endfor %}
+  </div>
+  <div class="users_box">
+    <h3>Poslední příspěvky</h3>
+    {% for donor in donors %}
+    <p><table width="220"><tr><td><i class="icon-user"></i></td><td>{{ donor.name }}</td><td>{{ donor.money }} Kč</td></tr></table></p>
+    {% endfor %}
+  </div>
+  <div class="project_box">
+    <h3>Diskuse (4)</h3>
+    {% for post in posts %}
+    {{ post.post_date }}
+    <p><strong>{{ post.author }}:</strong> {{ post.message }}</p>
+    <hr>
+    {% endfor %}
+    <h4>Přidat příspěvek</h4>    
+    <br>
+        {{ form.errors }}
+       <form action="" method="post">{% csrf_token %}
+
+       {{ form.author.errors }}
+       <label for='author'> {{ form.author.label }} </label>
+       {{ form.author }}
+
+       {{ form.mail.errors }}
+       <label for='mail'> {{ form.mail.label }} </label>
+       {{ form.mail }}
+
+       {{ form.message.errors }}
+       <label for='message'> {{ form.message.label }} </label>
+       {{ form.message }}
+
+        <input type='submit' value='Odeslat'>
+       
+       <hr>
+    </div>  
+    
+  </div>
+</div>
+      <!-- END GRID -->
+
+<script>
+var options={ "publisher": "4553a31b-9594-4cb9-8bb9-11444efa1d62", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "googleplus", "twitter", "email", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
+
+    <footer class="footer-inner">
+     <div class="container">
+     <div class="row">
+     <div class="span6">
+
+    <p class="copyright">&copy;2012 Podpoř vědu.cz </p>
+
+     </div>
+     <div class="span6"> <div class="pull-right"><nav role="navigation">
+  <ul>
+    <li><a href="/">Hlavní stránka</a></li>
+    <li><a href="/about/">O projektu</a></li>
+    <li><a href="///podporvedu.tumblr.com/">Blog</a></li>
+    <li><a href="///twitter.com/PodporVedu">Twitter</a></li>
+    <li><a href="///facebook.com/PodporVedu">Facebook</a></li>
+    <li><a href="/contact/">Kontakt</a></li>
+  </ul>
+</nav> </div>
+
+      </div>
+      </div>
+      </div>
+
+    </footer>
+
+    <!-- END MAIN CONTAINER -->
+
+
+
+     <!-- LOAD JQUERY/JAVASCRIPT ASSETS
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.wookmark.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.imagesloaded.js"></script>
+
+
+
+   <script>
+    // Wookmark Grid JQuery Plugin
+
+
+ $('#tiles').imagesLoaded(function() {
+      // Prepare layout options.
+      var options = {
+        autoResize: true, // This will auto-update the layout when the browser window is resized.
+        container: $('#main'), // Optional, used for some extra CSS styling
+        offset: 10, // Optional, the distance between grid items
+        itemWidth: 210 // Optional, the width of a grid item
+      };
+
+      // Get a reference to your grid items.
+      var handler = $('#tiles li');
+
+      // Call the layout function.
+      handler.wookmark(options);
+
+      // Capture clicks on grid items.
+      handler.click(function(){
+
+
+        // Update the layout.
+        handler.wookmark();
+      });
+    });
+</script>
+<!--
+   <script>
+           $(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(2000);
+
+
+
+}); -->
+
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
