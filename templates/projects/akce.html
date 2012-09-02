@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Podpoř vědu | Podpora {% endblock %}
+
+{% block content %}
+    <div class="span9">
+        <div class="page_head" ><h2>Podpora &frasl;&frasl;</h2></div>
+    
+        <div class="secondary_content">
+
+            <p><strong>Jsme rádi, že máte zájem o vědu i o náš projekt.</strong> Stránky jsou v alfa verzi - některé funkce zatím nejsou implementovány.</p>
+            <p>Napište nám na <a href="mailto:info@podporvedu.cz">info@podporvedu.cz</a> anebo zanechte kontakt a budeme Vás průběžně informovat o aktualitách.</p>
+
+            <!-- Begin MailChimp Signup Form -->
+            <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+
+            <div id="mc_embed_signup">
+                <form action="http://podporvedu.us5.list-manage.com/subscribe/post?u=d8c7cb07dbbe4c5c89c94a746&amp;id=11e79f3a41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div class="clear">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+{% endblock %}

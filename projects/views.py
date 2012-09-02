@@ -4,7 +4,6 @@ from projects.models import Project
 from projects.models import Donor
 from projects.models import News
 from projects.models import Post
-# from projects.forms import PostForm
 
 from django.template import Context, loader, RequestContext
 from django.shortcuts import get_object_or_404, render_to_response, redirect

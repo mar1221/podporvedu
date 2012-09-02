@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Podpoř vědu | Kontakt {% endblock %}
+
+{% block content %}
+    <div class="span9">
+        <div class="page_head" ><h2>Kontaktujte nás &frasl;&frasl;</h2></div>
+
+        <div class="secondary_content">
+            <p><strong>Jsme rádi, že máte zájem o vědu i o náš projekt.</strong> Stránky jsou v alfa verzi - některé funkce zatím nejsou implementovány.</p>
+            <p>Napište nám na <a href="mailto:info@podporvedu.cz">info@podporvedu.cz</a> anebo zanechte kontakt a budeme Vás průběžně informovat o aktualitách.</p>
+            
+            <hr>
+
+            <!-- Begin MailChimp Signup Form -->
+            <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+                <form action="http://podporvedu.us5.list-manage.com/subscribe/post?u=d8c7cb07dbbe4c5c89c94a746&amp;id=11e79f3a41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>        
+
+
+            <ul class="thumbnails">
+                <li class="span4">
+                    <div style="font-size: 24px;">
+                        <a style="color:#4D5C93;" href="http://facebook.com/PodporVedu"> <i class=" icon-facebook-sign"></i> Jsme na Facebooku </a>
+                    </div>
+                </li>
+                <li class="span4">
+                    <div style="font-size: 24px;">
+                        <a href="http://twitter.com/PodporVedu"> <i class="icon-twitter-sign"></i> Sledujte náš Twitter</a>
+                    </div>
+                </li>
+                <li class="span4">
+                    <div style="font-size: 24px;">
+                        <a style="color:#DA4946;" href="https://plus.google.com/113219025253857388676/posts"> <i class="icon-google-plus-sign"></i> Přidejte si nás na G+</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>    
+{% endblock %}
