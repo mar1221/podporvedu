@@ -1,6 +1,6 @@
 # Projekt podpor vedu (podporvedu.cz)
 =====================================
-[PodporVedu][http://damp-ravine-2660.herokuapp.com/]
+[PodporVedu](http://damp-ravine-2660.herokuapp.com/)
 
 
 ## Setup project on local development machine
@@ -34,4 +34,4 @@ Installed python, vitualenv and pip
 4. If changes to db has been made sync it
     $heroku run python manage.py syncdb
 
-More info in [heroku docs][https://devcenter.heroku.com/articles/django#commit-to-git]
+More info in [heroku docs](https://devcenter.heroku.com/articles/django#commit-to-git)
