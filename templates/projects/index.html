@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Podpoř vědu | Hlavní stránka {% endblock %}
+{% block content %}
+
+
+<div class="span9">
+ <div id="main" role="main">
+
+    <ul id="tiles">
+      <!-- These are our grid blocks -->
+      {% for project in projects %}
+      <li>
+        <img src="{{ project.project_image }}" alt="">
+        <div class="caption">
+          <h5><a href="project/{{ project.id }}" onClick="_gaq.push(['_trackEvent', 'Project', '{{ project.id }}', 'Show']);"> {{ project.name }} </a></h5>
+          <p>{{ project.description }}</p>
+          <p><strong> {{ project.earned }} Kč / {{ project.funding_needed }} Kč</strong>
+            <div class="progress">
+              <div class="bar" style="width: 25%;"></div>
+            </div>
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+      <!-- End of grid blocks -->
+    </ul>
+  </div>
+</div><!--/row-->
+{% endblock %}

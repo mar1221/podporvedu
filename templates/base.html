@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unikátní projekt na propojení vedy a veřejnosti.">
+    <meta name="author" content="Radovan Igliar, Berka, Adam Cironis">
+
+    <!-- LOAD CSS ASSETS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/gridline.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- LOAD GOOGLE WEBFONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">    
+  </head>
+  
+  <body>
+    <!-- START MAIN CONTAINER -->
+    <div class="container-fluid">
+      <div class="row-fluid">
+    
+        <!-- START SIDEBAR -->
+        <div class="span3" style="margin-top:30px;">
+
+          <div class="side_holder">
+            <div class="logo"><a href="/"><img  src="/static/img/logo.png" alt="logo"/></a></div>
+
+            <p>
+              <strong>Věříme v kvalitu české vědy</strong> a chceme jí pomoct. Přinášíme nový pohled na vědu a ukážeme 
+              ti že věda může být srozumitelná a dostupná. Můžeš si najít vědecký projekt, který tě zajímá a ten sledovat
+               nebo i podpořit.</p><p>Zapoj se i ty!
+            </p> 
+          </div>
+
+          <div class="sidecontainer"><h4>Pomohli vědě:</h4><p></p>
+            <p><table><tr><td><i class="icon-user"></i></td><td>Jan Novák</td></tr></table></p>
+            <p><table><tr><td><i class="icon-user"></i></td><td>Michal Novák</td></tr></table></p>
+            <p><table><tr><td><i class="icon-user"></i></td><td>Tomáš Novák</td></tr></table></p>
+            <p><table><tr><td><i class="icon-user"></i></td><td>Vlastimil Novák</td></tr></table></p>
+          </div>
+          
+          <div class="side_holder">
+            <div class="btn-group" >
+              <a class="btn" style="font-size:25px;" href="///www.facebook.com/PodporVedu"><i class="icon-facebook-sign"></i></a>
+              <a class="btn" style="font-size:25px;" href="///twitter.com/PodporVedu"><i class="icon-twitter-sign"></i></a>
+              <a class="btn" style="font-size:25px;" href="///gplus.to/PodporVedu"><i class="icon-google-plus-sign"></i></a>
+              <a class="btn" style="font-size:25px;" href="///podporvedu.tumblr.com/"><i class="icon-pencil"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- START MAIN CONTENT -->
+        {% block content %} {% endblock %}
+
+      </div>
+    </div>
+        
+    <footer class="footer-inner">
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            <p class="copyright">&copy;2012 Podpoř vědu.cz </p>
+          </div>
+          <div class="span6">
+            <div class="pull-right">
+              <nav role="navigation">
+                <ul>
+                  <li><a href="/">Hlavní stránka</a></li>
+                  <li><a href="/about/">O projektu</a></li>
+                  <li><a href="///podporvedu.tumblr.com/">Blog</a></li>
+                  <li><a href="///twitter.com/PodporVedu">Twitter</a></li>
+                  <li><a href="///facebook.com/PodporVedu">Facebook</a></li>
+                  <li><a href="/contact/">Kontakt</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+       
+    <script src="/static/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34372235-1']);
+      _gaq.push(['_setDomainName', 'podporvedu.cz']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>    
+  </body>
+</html>
